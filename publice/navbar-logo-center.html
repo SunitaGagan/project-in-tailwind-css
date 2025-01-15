@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <nav class="relative p-4 bg-white w-full flex justify-center 
+    flex-wrap justify-between">
+        <div class="md:absolute md:top-2 md:bottom-0 md:left-0 md:right-0
+        md:ml-auto md:mr-auto md:w-44">
+            <a href="#" class="text-2xl text-orange-600 text-nowrap 
+            cursor-pointer hover:text-black"> Techno <span> Sunita</span></a>
+        </div>
+        <svg class="h-8 w-8 text-gray-500 md:hidden cursor-pointer" id="mobileIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+
+        <div class="justify-start pt-6 md:pt-0 md:flex items-center
+        w-full hidden" id="navbarBlock">
+            <ul class=" md:flex justify-start w-2/4
+            ">
+                <li> <a href="#" class="text-lg p-4 
+                  hover:text-orange-700 hover:underline"> Home</a></li>
+                <li> <a href="#" class="text-lg p-4
+                  hover:text-orange-700 hover:underline"> About</a></li>
+                <li> <a href="#" class="text-lg p-4
+                  hover:text-orange-700 hover:underline"> Services</a></li>
+            </ul>
+            <ul class="md:flex justify-end w-2/4">
+                <li> <a href="#" class="text-lg p-4
+                  hover:text-orange-700 hover:underline"> Sign In</a></li>
+                <li> <a href="#" class="text-lg p-4
+                  hover:text-orange-700 hover:underline"> Product </a></li>
+                <li> <a href="#" class="text-lg p-4
+                  hover:text-orange-700 hover:underline"> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        const mobileIcon = document.querySelector("#mobileIcon");
+        const navbarBlock = document.querySelector("#navbarBlock");
+        mobileIcon.addEventListener('click', () => {
+            navbarBlock.classList.toggle('hidden')
+        });
+    </script>
+</body>
+
+</html>

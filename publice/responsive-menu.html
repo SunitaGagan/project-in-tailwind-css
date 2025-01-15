@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwin css</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body>
+    <header>
+        <nav class="py-4 md:py-0 px-5 text-lg bg-black text-red-50 flex flex-wrap w-full items-center justify-between">
+            <div>
+                <a href="#"> TechnoSunita</a>
+            </div>
+            <svg id="mobileIcon" class="h-8 w-8 cursor-pointer md:hidden text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  <line x1="17" y1="10" x2="3" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="17" y1="18" x2="3" y2="18" /></svg>
+            <div class=" hidden w-full md:flex items-center md:w-auto" id="navbar">
+                <ul class="md:flex md:justify-between pt-4 text-gray-50 md:pt-0">
+                    <li> <a href="#" class="block md:p-4 py-2 text-yellow-50 text-lg hover:text-red-500"> Home </a></li>
+                    <li> <a href="#" class="block md:p-4 py-2 text-yellow-50 text-lg hover:text-red-500"> About Us </a></li>
+                    <li> <a href="#" class="block md:p-4 py-2 text-yellow-50 text-lg hover:text-red-500"> Services </a></li>
+                    <li> <a href="#" class="block md:p-4 py-2 text-yellow-50 text-lg hover:text-red-500"> Contact </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const novbaricon = document.querySelector("#mobileIcon");
+        const menu = document.querySelector("#navbar");
+        novbaricon.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        })
+    </script>
+</body>
+
+</html>
