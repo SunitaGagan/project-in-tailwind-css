@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <style>
+        /* Add missing styles for 3D flip */
+        
+        .perspective {
+            perspective: 1000px;
+        }
+        
+        .transform-style-preserve-3d {
+            transform-style: preserve-3d;
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="group perspective">
+        <div class="relative w-64 h-96 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-x-180">
+            <!-- Front Side -->
+            <div class="absolute w-full h-full bg-green-500 text-white flex items-center justify-center backface-hidden">
+                Front
+            </div>
+            <!-- Back Side -->
+            <div class="absolute w-full h-full bg-yellow-500 text-white flex items-center justify-center rotate-x-180 backface-hidden">
+                Back
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
